@@ -21,7 +21,7 @@ if (n <= 1) {
   return 1;
 }
 else {
- return n * fact(n-1);
+ return n*fact(n-1);
 }
 }
 
@@ -46,9 +46,9 @@ return sin;
 }
 
 double cosn(double x, uint16_t count) {
-double cos = 0;
-for (int g = count; g > 0; g--) {
-cos += pown((-1), g-1) * (pown(x, 2*g-2) / fact(2*g-2));
-}
+  double cos = 0;
+  for (int g = count; g > 0; g--) {
+    cos += pown((-1), g-1)*(pown(x, 2*g-2)/fact(2*g-2));
+  }
 return cos;
 }
