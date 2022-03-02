@@ -1,17 +1,17 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
-#include <cmath>
 #include "alg.h"
 
 
 double pown(double value, uint16_t n) {
-if (n == 1) {
-  return value;
-}
-if (n == 0) {
-  return 1;
+if (n==0) {
+    return 1;
+} else if (n==1) {
+    return x;
+} else if (n % 2 == 0 ) {
+    return pown(value * value, n/2);
 } else {
-  return value*pow(value, n-1);
+    return pown(value * value, n/2)*value;
 }
 }
 
@@ -24,13 +24,13 @@ if (n <= 1) {
 }
 
 double calcItem(double x, uint16_t n) {
-return pow(x, n)/fact(n);
+return pown(x, n)/fact(n);
 }
 
 double expn(double x, uint16_t count) {
 double exp = 1;
 for (int g = 1; g <= count; g++) {
-exp += pow(x, g)/fact(g);
+exp += pown(x, g)/fact(g);
 }
 return exp;
 }
