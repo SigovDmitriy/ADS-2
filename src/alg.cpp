@@ -10,8 +10,7 @@ if (n == 1) {
 }
 if (n == 0) {
   return 1;
-}
-else {
+} else {
   return pow(value, n);
 }
 }
@@ -20,7 +19,7 @@ uint64_t fact(uint16_t n) {
 if (n <= 1) {
   return 1;
 }
-else {
+} else {
  return n*fact(n-1);
 }
 }
@@ -40,7 +39,7 @@ return exp;
 double sinn(double x, uint16_t count) {
 double sin = 0;
 for (int g = count; g > 0; g--) {
-sin += pown((-1), g-1) * (pown(x, 2*g-1) / fact(2*g-1));
+sin += pown((-1), g-1)*(pown(x, 2*g-1)/fact(2*g-1));
 }
 return sin;
 }
