@@ -11,7 +11,7 @@ if (n == 1) {
 if (n == 0) {
   return 1;
 } else {
-  return pow(value, n);
+  return value*pow(value, n-1);
 }
 }
 
@@ -19,7 +19,7 @@ uint64_t fact(uint16_t n) {
 if (n <= 1) {
   return 1;
 } else {
- return n*fact(n-1);
+  return n*fact(n-1);
 }
 }
 
